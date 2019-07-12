@@ -1,0 +1,23 @@
+{
+  "name": "exp-basic",
+  "version": "1.0.0",
+  "description": "\"Express JS Learing\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/tanawut.wattana/exp-basic.git"
+  },
+  "keywords": [
+    "Express",
+    "JS"
+  ],
+  "author": "Tanawut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/tanawut.wattana/exp-basic/issues"
+  },
+  "homepage": "https://gitlab.com/tanawut.wattana/exp-basic#readme"
+}
