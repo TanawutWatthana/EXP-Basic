@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://gitlab.com/tanawut.wattana/exp-basic/issues"
   },
-  "homepage": "https://gitlab.com/tanawut.wattana/exp-basic#readme"
+  "homepage": "https://gitlab.com/tanawut.wattana/exp-basic#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
