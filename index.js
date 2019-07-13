@@ -1,8 +1,12 @@
 const express = require("express");
 const path = require("path");
 const members = require("./members");
+const logger = require("./middleware/logger");
 
 const app = express();
+
+//Init middleware
+app.use(logger);
 
 //basic return json api
 app.get("/api/members", (req, res) => {
