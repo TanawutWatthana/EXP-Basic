@@ -20,5 +20,12 @@ const members = [
 ];
 
 module.exports.getMembers = id => {
-  return id == null ? members : members.filter(member => member.id == id);
+  if (id == null) {
+    return members;
+  } else {
+    return members.some(member => member.id == id)
+      ? members.filter(member => member.id == id)
+      : { msg: "members not found" };
+  }
+  //return id == null ? members : members.filter(member => member.id == id);
 };
