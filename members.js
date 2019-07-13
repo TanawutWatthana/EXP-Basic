@@ -19,6 +19,6 @@ const members = [
   }
 ];
 
-module.exports.getMembers = () => {
-  return members;
+module.exports.getMembers = id => {
+  return id == null ? members : members.filter(member => member.id == id);
 };

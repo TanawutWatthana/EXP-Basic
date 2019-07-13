@@ -12,6 +12,9 @@ app.use(logger);
 app.get("/api/members", (req, res) => {
   res.json(members.getMembers());
 });
+app.get("/api/members/:id", (req, res) => {
+  res.json(members.getMembers(parseInt(req.params.id)));
+});
 
 //get route
 app.get("/", (req, res) => {
