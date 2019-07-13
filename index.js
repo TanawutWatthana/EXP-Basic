@@ -1,31 +1,12 @@
 const express = require("express");
 const path = require("path");
+const members = require("./members");
 
 const app = express();
 
 //basic return json api
-const members = [
-  {
-    id: 1,
-    name: "John Doe",
-    email: "john@gmail.com",
-    status: "active"
-  },
-  {
-    id: 2,
-    name: "Bob Williams",
-    email: "bob@gmail.com",
-    status: "inactive"
-  },
-  {
-    id: 3,
-    name: "Shannon Jackson",
-    email: "shannon@gmail.com",
-    status: "active"
-  }
-];
 app.get("/api/members", (req, res) => {
-  res.json(members);
+  res.json(members.getMembers());
 });
 
 //get route
