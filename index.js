@@ -6,6 +6,9 @@ const app = express();
 
 //Init middleware
 app.use(logger);
+//Init JSON Parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 //get route
 //rout root path

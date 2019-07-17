@@ -32,5 +32,19 @@ router.get("/:id", (req, res) => {
     });
   }
 });
+router.post("/", (req, res) => {
+  if (req.body.name && req.body.email) {
+    const newMember = {
+      name: req.body.name,
+      email: req.body.email,
+      status: "active"
+    };
+    res.json(newMember);
+  } else {
+    res.status(400).json({
+      msg: "information is not complete"
+    });
+  }
+});
 
 module.exports = router;
