@@ -46,5 +46,24 @@ router.post("/", (req, res) => {
     });
   }
 });
+router.put("/:id", (req, res) => {
+  const updMember = req.body;
+  if (members.some(member => member.id === parseInt(req.params.id))) {
+    members.forEach(member => {
+      if (member.id === parseInt(req.params.id)) {
+        member.name = updMember.name ? updMember.name : member.name;
+        member.email = updMember.email ? updMember.email : member.email;
+        res.json({
+          msg: "Member updated",
+          member
+        });
+      }
+    });
+  } else {
+    res.status(400).json({
+      msg: `members not found : no member with id of ${req.params.id}`
+    });
+  }
+});
 
 module.exports = router;
