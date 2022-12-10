@@ -22,7 +22,7 @@
   },
   "homepage": "https://gitlab.com/tanawut.wattana/exp-basic#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "moment": "^2.24.0"
   },
   "devDependencies": {
